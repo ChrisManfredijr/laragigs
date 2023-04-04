@@ -16,4 +16,12 @@
             ]
             ];
         }
+        public static function find($id){
+          $listings = self::all();
+          foreach($listings as $listing){
+            if($listing['id'] == $id){
+                return $listing;
+            }
+          }  
+        }
     }
